@@ -1,7 +1,7 @@
 // VARIÁVEIS IMPORTANTES
 
-let sanidade = 100
-
+//VIDA INICIAL
+barra.valor = 50;
 
 // ETAPA 1
 
@@ -22,10 +22,7 @@ const etapa1passarPorEles = document.querySelector('#passarPorEles');
 
 function passarPorEles() {
   alert('Você Passou!');
-  sanidade = sanidade - 20
-  //logica de perder sanidade
-  //logica de perder amizade
-  //logicas de escolhas
+  barra.mudar_valor(-10)
 }
 
 etapa1passarPorEles.addEventListener('click', passarPorEles);

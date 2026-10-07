@@ -56,6 +56,12 @@ h1 {
   font-size: 1.5rem;
 }
 
+.vida{
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
 #conteiner_barrinha {
   display: block;
 }
