@@ -1,3 +1,4 @@
+const barra = new Barra(0, 100, 80, 20)
 barra.desenhar(document.querySelector('#conteiner_barrinha'));
 
 // VARIÁVEIS IMPORTANTES

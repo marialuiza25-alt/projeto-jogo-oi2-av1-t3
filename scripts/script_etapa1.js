@@ -1,7 +1,11 @@
 // VARIÁVEIS IMPORTANTES
+localStorage.removeItem('vida');
 
+const barra = new Barra(0, 100, 20, 100)
 //VIDA INICIAL
-barra.valor = 50;
+barra.mudar_valor(100)
+
+barra.desenhar(document.querySelector('#conteiner_barrinha'));
 
 // ETAPA 1
 
@@ -10,9 +14,6 @@ const etapa1seEsconder = document.querySelector('#seEsconder');
 
 function seEsconder() {
   alert('você se Escondeu!');
-  //logica de perder sanidade
-  //logica de perder amizade
-  //logicas de escolhas
 }
 
 etapa1seEsconder.addEventListener('click', seEsconder);
