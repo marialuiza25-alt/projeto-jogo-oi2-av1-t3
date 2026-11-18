@@ -8,13 +8,19 @@ class Barra {
   }
 
   mudar_valor(quanto) {
-    this.valor = Number(localStorage.getItem('vida'))
+    const valorSalvo = Number(localStorage.getItem('vida'));
+    this.valor = Number.isNaN(valorSalvo) ? this.valor_minimo : valorSalvo;
     this.valor += quanto;
+
+    if (this.valor > this.valor_maximo) this.valor = this.valor_maximo;
+    if (this.valor < this.valor_minimo) this.valor = this.valor_minimo;
+
     localStorage.setItem("vida", this.valor);
   }
 
   desenhar(alvo) {
-    this.valor = localStorage.getItem('vida')
+    const valorSalvo = Number(localStorage.getItem('vida'));
+    this.valor = Number.isNaN(valorSalvo) ? this.valor_maximo : valorSalvo;
     alvo.innerHTML = `
     <div style='height: ${this.altura}px; width: ${
       (this.valor / this.valor_maximo) * this.largura_maxima
